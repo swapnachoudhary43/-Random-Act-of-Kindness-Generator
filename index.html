@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Act of Kindness Generator</title>
+      <!-- Link to external CSS -->
+      <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDJ8fGtpbmR8ZW58MHx8fHwxNjYzMjM4NTE3&ixlib=rb-1.2.1&q=80&w=1080');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 50px;
+        }
+        h1 {
+            color: #ffefd5;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .kindness-generator {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #ff4a40;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+        .act {
+            font-size: 24px;
+            color: #333;
+            margin-top: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .act.fade-in {
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Random Act of Kindness Generator</h1>
+    <div class="kindness-generator">
+        <p>Click the button to get a random act of kindness!</p>
+        <button onclick="generateKindness()">Generate Kindness</button>
+        <button onclick="refreshPage()" id="refreshButton" style="display: none;">Refresh</button>
+        <div class="act fade-in" id="kindnessAct"></div>
+    </div>
+     <!-- External JavaScript file -->
+     <script src="script.js"></script>
+</body>
+</html>
